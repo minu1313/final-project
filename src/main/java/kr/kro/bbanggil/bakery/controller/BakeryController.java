@@ -20,5 +20,10 @@ public class BakeryController {
 	@GetMapping("/menu/insert/form")
 	public String menuInsertForm() {
 		return "owner/menu-insert";
+		
+	}
+	@GetMapping("/detail/form")
+	public String detail() {
+		return "user/bakery-detail";
 	}
 }
