@@ -1,21 +1,25 @@
 package kr.kro.bbanggil.user.member.api;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import kr.kro.bbanggil.admin.service.AdminMainServiceImpl;
+import kr.kro.bbanggil.common.scheduler.NewsletterScheduler;
+import kr.kro.bbanggil.common.service.EmailServiceImpl;
+import kr.kro.bbanggil.user.bakery.service.BakeryServiceImpl;
+import lombok.RequiredArgsConstructor;
+
 @RestController
 @RequestMapping("/sms")
+@RequiredArgsConstructor
 public class SmsController {
 
     private final SmsServiceImpl smsService;
 
-    public SmsController(@Autowired SmsServiceImpl smsService){
-        this.smsService = smsService;
-    }
+    
 
     // 인증번호 전송
     @PostMapping("/send")
