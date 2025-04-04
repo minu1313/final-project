@@ -61,6 +61,9 @@ public class MypageController {
 		List<MypageListResponseDto> getBuyHistory = (List<MypageListResponseDto>) result.get("getBuyHistory");
 		
 
+		for(MypageListResponseDto item : getBuyHistory) {
+			System.out.println(item.getReviewDto().getOrderNo());
+		}
 		model.addAttribute("getBuyHistory",getBuyHistory);
 		 model.addAttribute("userName",userName);
 		 model.addAttribute("userInfo",userInfo);
@@ -69,10 +72,7 @@ public class MypageController {
 
 		PageInfoDTO piResult = (PageInfoDTO) result.get("pi");
 		
-		System.out.println(piResult.getMaxPage());
-		System.out.println(piResult.getOffset());
-		System.out.println(piResult.getBoardLimit());
-		System.out.println(piResult.getRow());
+
 
 		
 		if(session.getAttribute("role").equals("owner"))

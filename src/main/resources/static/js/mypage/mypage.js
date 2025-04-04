@@ -120,7 +120,7 @@ function writeBtn(index) {
 
 	    const rating = parseFloat(ratingValueElement.textContent); // 해당 리스트의 저장된 별점 가져오기
 	    const stars = starContainer.querySelectorAll("i");
-
+		
 	    fillStars(stars, rating); // 저장된 별점 값 반영
 	});
 	
