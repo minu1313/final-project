@@ -105,7 +105,8 @@ public class AdminMainServiceImpl implements AdminMainService {
 
 	@Override
 	public Map<String, Object> trafficMonitoring() {
-		int todayUser = adminMapper.getTodayUser();
+		Integer todayUser = adminMapper.getTodayUser();
+								   
 		int totalOrder = adminMapper.getTotalOrder();
 		int newUser = adminMapper.getNewUser();
 
