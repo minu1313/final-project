@@ -162,25 +162,21 @@ ORDER BY
 
 <select id="getCategoryBakeries" resultMap="BakeryResultMap">
 SELECT
-		mc.CATEGORY,
-		COUNT(DISTINCT bi.BAKERY_NO) AS bakery_count
+	mc.CATEGORY,
+	COUNT(DISTINCT bi.BAKERY_NO) AS bakery_count
 FROM
-		MENU_CATEGORY mc
-JOIN
-		MENU m ON
-		mc.CATEGORY_NO = m.CATEGORY_NO
+	MENU_CATEGORY mc
+JOIN MENU m ON
+	mc.CATEGORY_NO = m.CATEGORY_NO
 JOIN CART_INFO ci ON
-		m.MENU_NO =
-		ci.MENU_NO
+	m.MENU_NO = ci.MENU_NO
 JOIN BAKERY_INFO bi ON
-		bi.BAKERY_NO = m.BAKERY_NO
-WHERE
-		mc.CATEGORY IN (MC.CATEGORY)
+	bi.BAKERY_NO = m.BAKERY_NO
 GROUP BY
-		mc.CATEGORY
+	mc.CATEGORY
 ORDER BY
-		bakery_count
-		DESC	
+	bakery_count DESC
+FETCH FIRST 5 ROWS ONLY
 
 </select>
 </mapper>
