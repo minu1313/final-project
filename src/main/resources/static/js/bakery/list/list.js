@@ -282,16 +282,16 @@ $(document).ready(function() {
                                 </div>
                                 <div class="slide-indicators" id="indicators${index + 11}"></div>
                             </div>
-                            <div class="list-item-info">
-                                <a href="/bakery/detail?bakeryNo=${post.bakeryNo}">
-                                    <h2 class="list-item-title">${post.bakeryName}</h2>
-                                </a>
+							<a href="/bakery/detail?bakeryNo=${post.bakeryNo}">
+                            <div class="list-item-info">                               
+                                    <h2 class="list-item-title">${post.bakeryName}</h2>                               
                                 <p class="list-item-address">📍<span>${post.bakeryAddress}</span></p>
                                 <p class="list-item-score">⭐️평점: <span>${post.bakeryReviewDTO.reviewRating}</span></p>
                                 <p class="list-item-time">🕒영업시간: <span>${post.bakeryScheduleDTO.bakeryOpenTime}</span>~<span>${post.bakeryScheduleDTO.bakeryCloseTime}</span></p>
                                 <p class="list-item-review">📝리뷰: <span>${post.reviewCount}</span></p>
                                 <p class="list-item-parking">🚗: <span>${post.bakeryDetailDTO.bakeryAmenity}</span></p>
                             </div>
+							</a>
                         </div>
                     `;
 
