@@ -44,7 +44,7 @@ public interface AdminMapper {
 
 
 	@Select("SELECT SUM(user_count) FROM user_count")
-	int getTodayUser();
+	Integer getTodayUser();
 
 	@Select("SELECT count(*) FROM order_info")
 	int getTotalOrder();
