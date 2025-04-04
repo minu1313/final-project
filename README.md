@@ -22,16 +22,16 @@
 ## 🛠 기술 스택
 
 ### 💻 Back-end
-- **Java 17**, **Spring MVC**, **Oracle**, **MyBatis**, **Thymeleaf**
+- **Java 17**, **Spring Boot**, **Oracle**, **MyBatis**, **Thymeleaf**
 
 ### 🎨 Front-end
 - **HTML**, **CSS**, **JavaScript**
 
 ### ⚙️ DevOps & Tools
-- **Git**, **GitHub**, **STS4**
+- **Git**, **GitHub**, **STS4**, **Dbeaver**
 
 ### 🌐 External API
-- **Kakao Map API**, **PortOne Payment API**, **사업자 API**, **문자 API**, **주소 API**
+- **Kakao Map API**, **PortOne Payment API**, **국세청 사업자번호 API**, **cool sms API**, **Dame 주소API**
 
 ## 📂 폴더 구조
 
